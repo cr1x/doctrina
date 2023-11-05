@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>DOCTRINA Sistema de información para el conocimiento y doctrina</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+
+  <body>
+
+    <!-- Loader-->
+    <!-- <div id="page-preloader"><span class="spinner border-t_second_b border-t_prim_a"></span></div> -->
+    <!-- Loader end-->
+
+    <div class="fl-gray-color ">
+
+      <!-- <div class="fl-nav-wrapper">
+
+        <div class="fl-mobile-nav">
+          <a class="mobile-logo-img" href="index.html">
+            <img src="img/png/logo.png" alt="logo" width="172" height="45">
+          </a>
+          <div class="m-login">
+            <a href="/"><i class="icon-user icons"></i><span>Login</span></a>
+          </div>
+        </div>
+
+        <header class="fl-header">
+          <div class="nav-logo d-flex align-items-center">
+            <a class="logo-img" href="index.html">
+              <img src="img/png/logo.png" alt="logo" width="172" height="45">
+            </a>
+          </div>
+        </header>
+
+      </div> -->
+
+      <!-- <div class="breadcrumbs-minimal mb-105 d-flex align-items-center">
+        <div class="container">
+          <ul class="d-flex">
+            <li><a href="/">Home</a></li>
+            <li class="breadcrumbs-divider">
+              <span>\</span>
+            </li>
+            <li>Listing</li>
+          </ul>
+        </div>
+      </div> -->
+
+
+
+      <main class="main col-xl-12 pt-5">
+
+        <section>
+          <div class="row d-flex flex-column">
+            <div class="col-lg-5 col-md-8 col-sm-10 mx-auto text-center">
+              <h2>Consulta avanzada</h2>
+              <p class="lead text-body-secondary mt-2">Seleccione el criterio por el que desea realizar la busqueda:</p>
+            </div>
+
+            <div id="findTabContent">
+              <nav class="col-lg-6 col-md-8 col-sm-11 mx-auto">
+                <div class="nav nav-tabs nav-justified" id="findTab" role="tablist">
+                  <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Palabra clave</button>
+                  <button class="nav-link mx-1" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Año</button>
+                  <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Número del documento</button>
+                </div>
+              </nav>
+              <div class="search-container">
+                <div class="col-lg-6 col-md-8 col-sm-11 mx-auto tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="first__screen-form">
+                      <form action="#">
+                        <div class="input-group">
+                          <input type="search" class="form-control" aria-label="Text input" placeholder="Buscar por palabra .... " />
+
+                          <button type="submit" class="first-bg-color"> Buscar
+                            <span class="btn-icon-span">
+                              <i class="bi bi-search"></i>
+                            </span>
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="first__screen-form">
+                      <form action="#">
+                        <div class="input-group">
+                          <input type="search" class="form-control" aria-label="Text input" placeholder="Buscar por año .... " />
+
+                          <button type="submit" class="first-bg-color"> Buscar
+                            <span class="btn-icon-span">
+                              <i class="bi bi-search"></i>
+                            </span>
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <div class="first__screen-form">
+                      <form action="#">
+                        <div class="input-group">
+                          <input type="search" class="form-control" aria-label="Text input" placeholder="Buscar por el número del documento .... " />
+
+                          <button type="submit" class="first-bg-color"> Buscar
+                            <span class="btn-icon-span">
+                              <i class="bi bi-search"></i>
+                            </span>
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="filtrar mt-3" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  <i class="bi bi-funnel"></i>
+                  Filtrar resulados
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="collapse" id="collapseExample">
+            <div class="container-fluid text-center filters-container">
+              <div class="row">
+                <div class="col-8 mx-auto">
+                  <p class="mb-2">Seleccione los items por los que desea filtrar los resultados.</p>
+
+                  <div class="filters-box">
+                    <h5 class="mb-2">Tipos de doctrinas</h5>
+
+                    <div class="filters">
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-doctrina-criterios" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-doctrina-criterios"><i class="bi bi-plus"></i>Criterios</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-doctrina-conceptos" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-doctrina-conceptos"><i class="bi bi-plus"></i>Conceptos</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-doctrina-acuerdos" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-doctrina-acuerdos"><i class="bi bi-plus"></i>Acuerdos</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-doctrina-circulares" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-doctrina-circulares"><i class="bi bi-plus"></i>Circulares</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-doctrina-sentencias" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-doctrina-sentencias"><i class="bi bi-plus"></i>Sentencias</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-doctrina-resoluciones" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-doctrina-resoluciones"><i class="bi bi-plus"></i>Resoluciones</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="filters-box">
+                    <h5 class="mb-2">Temas</h5>
+
+                    <div class="filters">
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-registro" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-doctrina-registro"><i class="bi bi-plus"></i>Registro Público de Carrera Administrativa</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-plantas" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-plantas"><i class="bi bi-plus"></i>Plantas Temporales</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-nocompetencia" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-nocompetencia"><i class="bi bi-plus"></i>No Competencia de la CNSC</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-encargo" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-encargo"><i class="bi bi-plus"></i>Encargo</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-uso" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-uso"><i class="bi bi-plus"></i>Uso de Listas de Elegibles</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-listas" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-listas"><i class="bi bi-plus"></i>Listas de elegibles</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-cnsc" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-cnsc"><i class="bi bi-plus"></i>CNSC</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-comisiones" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-comisiones"><i class="bi bi-plus"></i>Comisiones de Personal</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-situaciones" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-situaciones"><i class="bi bi-plus"></i>Situaciones Administrativas</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-provision" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-provision"><i class="bi bi-plus"></i>Provisión de Empleo Público</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-otras" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-otras"><i class="bi bi-plus"></i>Otras Doctrinas</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-concursos" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-concursos"><i class="bi bi-plus"></i>Concursos cerrados</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-reincorporacion" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-reincorporacion"><i class="bi bi-plus"></i>Reincorporación</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-cobro" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-cobro"><i class="bi bi-plus"></i>Cobro Coactivo</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-evaluacion" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-evaluacion"><i class="bi bi-plus"></i>Evaluación del Desempeño Laboral – EDL
+                        </label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-concurso" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-concurso"><i class="bi bi-plus"></i>Concurso Público de Méritos</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-reclamacion" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-reclamacion"><i class="bi bi-plus"></i>Reclamación Laboral</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-vigilancia" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-vigilancia"><i class="bi bi-plus"></i>Vigilancia Carrera Administrativa</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-nombramiento" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-nombramiento"><i class="bi bi-plus"></i>Nombramiento en periodo de prueba</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-tema-acreditaciones" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-tema-acreditaciones"><i class="bi bi-plus"></i>Acreditaciones</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="filters-box">
+                    <h5 class="mb-2">Vigencia</h5>
+
+                    <div class="filters">
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-vigencias-vigente" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-vigencias-vigente"><i class="bi bi-plus"></i>Vigente</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-vigencias-novigente" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-vigencias-novigente"><i class="bi bi-plus"></i>No Vigente</label>
+                      </div>
+
+                      <div class="filter-check">
+                        <input type="checkbox" class="btn-check" id="check-vigencias-parcialmente" autocomplete="off">
+                        <label class="btn btn-outline-primary rounded-5 btn-sm" for="check-vigencias-parcialmente"><i class="bi bi-plus"></i>Parcialmente vigente</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="listing-top-info d-flex flex-wrap justify-content-sm-between justify-content-center align-items-center">
+            <div class="listing-top-text mb-md-0 mb-4"><strong>120 </strong>resultados</div>
+          </div>
+
+        </section>
+      </main>
+
+
+      <footer class="footer footer-bg-color">
+        xxx
+      </footer>
+    </div>
+
+    <script src="assest/modernizr.custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+
+</html>
